@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--Archive WebAR Demo (Engineering Entrepreneurship | Engineering Innovation Institute | University of Florida)
 
 Designer/Developer: Gabriel Martins (definexperience.co)
@@ -5,7 +6,6 @@ Designer/Developer: Gabriel Martins (definexperience.co)
 Credit for 3D model of piano keys: Ron Millar (https://poly.google.com/view/akGT4Q8Zbwz) 
 -->
 
-<!DOCTYPE html>
 <html>
 <head>
     <title>Archive WebAR Demo (Engineering Entrepreneurship | Engineering Innovation Institute | University of Florida)</title>
@@ -21,8 +21,6 @@ Credit for 3D model of piano keys: Ron Millar (https://poly.google.com/view/akGT
         <a-assets>
             <a-asset-item id="archive-obj" src="assets/archivelogo_new.obj"></a-asset-item>
             <a-asset-item id="archive-mtl" src="assets/archivelogo_new.mtl"></a-asset-item>
-            <a-asset-item id="keys-obj" src="assets/keys.obj"></a-asset-item>
-            <a-asset-item id="keys-mtl" src="assets/keys.mtl"></a-asset-item> 
         </a-assets>
 
         <a-entity light="type:ambient; intensity:0.5"></a-entity>
@@ -32,8 +30,6 @@ Credit for 3D model of piano keys: Ron Millar (https://poly.google.com/view/akGT
 
             <a-entity position="0 0 0" rotation="90 0 0">
 
-                <a-entity obj-model="obj: #keys-obj; mtl: #keys-mtl" scale="1 1 1" position="0 1 -1" rotation="0 180 0">
-                </a-entity>
                 
                 <a-entity obj-model="obj: #archive-obj; mtl: #archive-mtl" scale="0.070 0.070 0.070" rotation="0 -90 -90"position="0 0.96 -1.2">
                 </a-entity>
