@@ -23,6 +23,7 @@ html, body {
 }
 .img{
     width: 50%;
+    padding-top:2%;
 }
 
 .logo{
@@ -64,7 +65,7 @@ html, body {
 .content h2{
 	font-family: 'Nunito Sans', sans-serif;
 	font-size: 200%;
-	font-weight: 300;
+	font-weight: 400;
 	color: #E1EFE9;
 	line-height: 125%;
 	letter-spacing: 2px;
@@ -73,11 +74,11 @@ html, body {
 }
 
 p{
-	font-size: 150%;
+	font-size: 140%;
 	line-height: 175%;
-	font-weight: 300;
+	font-weight: 400;
 	font-family: 'Nunito Sans', sans-serif;
-	color: #E1EFE9;
+	color: #cb8f00;
 	text-align: center;
 }
 
@@ -96,14 +97,14 @@ p{
   font-size: 1.2em;
   font-family: 'Nunito Sans', sans-serif;
   width: 30%;
-  font-weight: 300;
+  font-weight: 400;
   color: #E1EFE9;
   text-decoration: none;
   border: solid #E1EFE9;
   padding: 12px 20px;
   border-radius: 9px;
   transition: all 0.5s;
-  background-image: linear-gradient(150deg, #cca300 0%, #ffcc00 100%, #ffcc00 100%);
+  background-image: linear-gradient(150deg, #efa900 0%, #cb8f00 100%, #cb8f00 100%);
   color: white;
   text-decoration: none;
 }
@@ -128,10 +129,11 @@ p{
 		line-height: 150%;
 	}
     .btn{
-	margin-top:22%!important;
+	margin-top:18%!important;
     }
 
 }
+
 @media screen and (max-width: 768px) {
 	.content h1 {
 		font-size: 300%;
@@ -141,7 +143,7 @@ p{
 		padding: 7px 15px;
 	}
 	p {
-		font-size: 140%;
+		font-size: 110%;
 		line-height: 130%;
 	}
 
@@ -150,7 +152,7 @@ p{
 	}
     
     .btn{
-	margin-top:22%!important;
+	margin-top:23%!important;
     }
 }
 
@@ -188,7 +190,7 @@ p{
 	}
     .content h2 {
 		font-size: 130%;
-        padding-top: 15%;
+        padding-top: 20%;
         padding-left: 4%;
 		padding-right: 4%;
 	}
@@ -202,7 +204,7 @@ p{
 	p {
 		padding-left: 1%;
 		padding-right: 1%;
-		font-size: 120%;
+		font-size: 110%;
 		line-height: 110%;
 	}
 	.title{
@@ -214,6 +216,78 @@ p{
         
     }
     .btn{
-	margin-top:75%!important;
+	margin-top:35%!important;
+    }
+}
+
+@media all and (max-width: 500px) { 
+	.content h1 {
+		font-size: 250%;
+	}
+    .content h2 {
+		font-size: 130%;
+        padding-top: 20%;
+        padding-left: 4%;
+		padding-right: 4%;
+	}
+	.webar-btn {
+		font-size: 1em;
+		width: 60%;
+	}
+	.img{
+		width:80%;
+	}
+	p {
+		padding-left: 1%;
+		padding-right: 1%;
+		font-size: 110%;
+		line-height: 110%;
+	}
+	.title{
+	margin-top:18%;
+	}
+    
+	.greeting{
+	margin-top:22%;
+        
+    }
+    .btn{
+	margin-top:40%!important;
+    }
+}
+
+@media all and (max-width: 460px) { 
+	.content h1 {
+		font-size: 220%;
+	}
+    .content h2 {
+		font-size: 120%;
+        padding-top: 20%;
+        padding-left: 4%;
+		padding-right: 4%;
+	}
+	.webar-btn {
+		font-size: 1em;
+		width: 60%;
+	}
+	.img{
+		width:80%;
+	}
+	p {
+		padding-left: 1%;
+		padding-right: 1%;
+		font-size: 100%;
+		line-height: 110%;
+	}
+	.title{
+	margin-top:18%;
+	}
+    
+	.greeting{
+	margin-top:22%;
+        
+    }
+    .btn{
+	margin-top:45%!important;
     }
 }
