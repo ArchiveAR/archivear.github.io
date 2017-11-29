@@ -5,13 +5,13 @@ html, body {
 	padding: 0;
 	height: 100%;
 	width: 100%;
-	overflow: hidden; 
+	overflow: auto; 
 }
 .wrapper{
 	min-height: 460px;
 	height: 100%;
 	width: 100%;
-	background-color: #131414;
+	background: url("assets/archive_bg.jpg") no-repeat 50% 50%;
 	top: 0;
 	background-size: cover;	
 	position: absolute;
@@ -29,7 +29,7 @@ html, body {
 }
 
 .btn{
-	margin-top:12%!important;
+	
 }
 
 .title{
@@ -92,7 +92,8 @@ p{
   flex-direction: column;
 }
 
-.twitter-btn {
+.btn {
+  margin-top:12%!important;
   font-size: 1.2em;
   font-family: 'Nunito Sans', sans-serif;
   width: 35%;
@@ -109,7 +110,7 @@ p{
   text-decoration: none;
 }
 
-.twitter-btn:hover{
+.btn:hover{
 
 }
 
@@ -119,30 +120,25 @@ p{
 	.content h1 {
 		font-size: 350%;
 	}
-	.twitter-btn {
+	.btn {
 		font-size: 1.1em;
 		padding: 9px 17px;
+        margin-top:22%!important;
 	}
 	p {
 		font-size: 140%;
 		line-height: 150%;
 	}
-	.greeting{
-		padding-top: 20%;
-		margin-top: 10%;
-	}
 
-	.btn{
-	margin-top:22%!important;
-}
 }
 @media screen and (max-width: 768px) {
 	.content h1 {
 		font-size: 300%;
 	}
-	.twitter-btn {
+	.btn {
 		font-size: 1em;
 		padding: 7px 15px;
+        margin-top:22%!important;
 	}
 	p {
 		font-size: 140%;
@@ -152,14 +148,6 @@ p{
 	.title{
 	margin-top:12%;
 	}
-
-	.greeting{
-		padding-top: 20%;
-		margin-top: 10%;
-	}
-	.btn{
-	margin-top:22%!important;
-}
 }
 
 @media all and (max-width: 640px) {
@@ -168,41 +156,42 @@ p{
 		font-size: 250%;
 	}
 
-	.twitter-btn {
+	.btn {
 		font-size: 1em;
 		padding: 7px 17px;
 		width: 50%;
+        margin-top:32%!important;
 	}
 
 	.img{
-		width:70%;
+		width:80%;
 	}
 
 	.title{
 	margin-top:16%;
 	}
-
-	.greeting{
-		margin-top:15%;
-	}
 	p {
 		font-size: 120%;
 		line-height: 130%;
 	}
-	.btn{
-	margin-top:32%!important;
+
 }
 
 @media all and (max-width: 575px) { 
 	.content h1 {
 		font-size: 250%;
 	}
-	.twitter-btn {
+    .content h2 {
+		font-size: 150%;
+        padding-top: 15%;
+	}
+	.btn {
 		font-size: 1em;
 		width: 60%;
+        margin-top:35%!important;
 	}
 	.img{
-		width:70%;
+		width:80%;
 	}
 	p {
 		padding-left: 1%;
@@ -213,11 +202,4 @@ p{
 	.title{
 	margin-top:18%;
 	}
-
-	.greeting{
-	margin-top:22%;
-}
-	.btn{
-	margin-top:35%!important;
-
 }
