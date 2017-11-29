@@ -1,10 +1,19 @@
+<!--Archive WebAR Demo (Engineering Entrepreneurship | Engineering Innovation Institute | University of Florida)
+
+Designer/Developer: Gabriel Martins (definexperience.co)
+
+Credit for 3D model of piano keys: Ron Millar (https://poly.google.com/view/akGT4Q8Zbwz) 
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Archive WebAR Demo (Engineering Entrepreneurship | Engineering Innovation Institute | University of Florida)</title>
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
     <script>THREE/ArToolkitContext.baseURL = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.js'</script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body style='margin: 0; overflow: hidden;'>
     <a-scene stats embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
@@ -12,15 +21,20 @@
         <a-assets>
             <a-asset-item id="archive-obj" src="assets/archivelogo_new.obj"></a-asset-item>
             <a-asset-item id="archive-mtl" src="assets/archivelogo_new.mtl"></a-asset-item>
+            <a-asset-item id="keys-obj" src="assets/keys.obj"></a-asset-item>
+            <a-asset-item id="keys-mtl" src="assets/keys.mtl"></a-asset-item> 
         </a-assets>
 
         <a-entity light="type:ambient; intensity:0.5"></a-entity>
         <a-entity light="type:directional;castShadow:true" position="3 3 -5" rotation="0 7 -20"></a-entity>
 
-        <a-marker-camera preset='hiro'></a-marker-camera>
+        <a-marker-camera type='pattern' patternUrl='assets/archive_marker.patt' position="0 1.5 0"></a-marker-camera>
 
-            <a-entity position="0 0 0" rotation="0 0 0">
+            <a-entity position="0 0 0" rotation="90 0 0">
 
+                <a-entity obj-model="obj: #keys-obj; mtl: #keys-mtl" scale="1 1 1" position="0 1 -1" rotation="0 180 0">
+                </a-entity>
+                
                 <a-entity obj-model="obj: #archive-obj; mtl: #archive-mtl" scale="0.070 0.070 0.070" rotation="0 -90 -90"position="0 0.96 -1.2">
                 </a-entity>
 
@@ -30,14 +44,11 @@
 
                 <a-sphere id="red-sphere" position="-1 0 -3" radius="0.25" color="red" animation="property: position; from: -1 0 -3; to: -1 3 -3; delay:3000; dur: 2000; fill: forwards; loop: true;" animation__opacity="property: opacity; from: 100; to: 0; delay:4000; dur: 1000; loop: true">
                 </a-sphere>
-                <a-sphere id="blue-sphere" position="0 0 -3" radius="0.25" color="blue">
-                    <a-animation attribute="position" from="0 0 -3" to="0 3 -3" delay="4000" dur="2000" fill="forwards" repeat="0"></a-animation>
-                    <a-animation attribute="opacity" from="100" to="0" delay="5000" dur="1000"></a-animation>
+                <a-sphere id="blue-sphere" position="0 0 -3" radius="0.25" color="blue" animation="property: position; from: 0 0 -3; to: 0 3 -3; delay:4000; dur: 2000; fill: forwards; loop: true;" animation__opacity="property: opacity; from: 100; to: 0; delay:5000; dur: 1000; loop: true">
                 </a-sphere>
-                <a-sphere id="green-sphere" position="1 0 -3" radius="0.25" color="green">
-                    <a-animation attribute="position" from="1 0 -3" to="1 3 -3" delay="5000" dur="2000" fill="forwards" repeat="0"></a-animation>
-                    <a-animation attribute="opacity" from="100" to="0" delay="6000" dur="1000"></a-animation>
+                <a-sphere id="green-sphere" position="1 0 -3" radius="0.25" color="green" animation="property: position; from: -1 0 -3; to: 1 3 -3; delay:5000; dur: 2000; fill: forwards; loop: true;" animation__opacity="property: opacity; from: 100; to: 0; delay:6000; dur: 1000; loop: true">
                 </a-sphere>
+                <a-animation attribute="rotation" dur="50000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
             </a-entity>
     </a-scene>
 </body>
